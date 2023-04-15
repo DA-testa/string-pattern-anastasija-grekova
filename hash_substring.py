@@ -13,8 +13,7 @@ def read_input():
             print("error")
             quit()        
         else:
-            file_path = f"{path}/{file_name}"
-            
+            file_path = f"{path}/{file_name}" 
             with open(file_path, "r", encoding="utf-8-sig") as f:
                 pattern = f.readline().rstrip()
                 text = f.readline().rstrip()
