@@ -6,6 +6,8 @@ def read_input():
     #quit()
     
     if check == "F":
+        print(input())
+        quit()
         path = os.getcwd() + '/tests'
         os.chdir(path)
         file_name = '06'
