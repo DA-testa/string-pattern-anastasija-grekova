@@ -1,12 +1,29 @@
 def read_input():
     # this function needs to acquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
-    input_choice = input().rstrip()
-    if input_choice == "F":
-        with open("input.txt") as f:
-            pattern = f.readline().rstrip()
-            text = f.readline().rstrip()
-    if input_choice == "I":
+    check = input().rstrip()
+
+
+    if check == 'F':
+        path = os.getcwd() + '/tests'
+        os.chdir(path)
+        file_name = input()
+
+        if 'a' in file_name:
+            print("error")
+            quit()        
+        else:
+            file_path = f"{path}/{file_name}"
+            
+            with open(file_path, "r", encoding="utf-8-sig") as f:
+                pattern = f.readline().rstrip()
+                text = f.readline().rstrip()
+
+    #if input_choice == "F":
+    #    with open("input.txt") as f:
+    #        pattern = f.readline().rstrip()
+    #        text = f.readline().rstrip()
+    if check == "I":
         pattern = input().rstrip()
         text = input().rstrip()
 
