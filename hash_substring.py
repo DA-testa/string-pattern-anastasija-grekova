@@ -11,15 +11,10 @@ def read_input():
         os.chdir(path)
         file_name = input()
 
-        print(file_name)
-        #quit()
-
         if 'a' in file_name:
             print("error")
             quit()        
         file_path = f"{path}/{file_name}" 
-        print(file_path)
-        quit()
         
         with open(file_path, "r", encoding="utf-8-sig") as f:
             pattern = f.readline().rstrip()
