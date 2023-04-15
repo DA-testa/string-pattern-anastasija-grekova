@@ -4,29 +4,28 @@ def read_input():
     check = input().rstrip()
 
 
+    #if check == "F":
+    #    path = os.getcwd() + '/tests'
+    #    os.chdir(path)
+    #    file_name = input()
+
+    #    if 'a' in file_name:
+    #        print("error")
+    #        quit()        
+    #    else:
+    #        file_path = f"{path}/{file_name}" 
+    #        with open(file_path, "r", encoding="utf-8-sig") as f:
+    #            pattern = f.readline().rstrip()
+    #            text = f.readline().rstrip()    input_choice
+
     if check == "F":
-        path = os.getcwd() + '/tests'
-        os.chdir(path)
-        file_name = input()
-
-        if 'a' in file_name:
-            print("error")
-            quit()        
-        else:
-            file_path = f"{path}/{file_name}" 
-            with open(file_path, "r", encoding="utf-8-sig") as f:
-                pattern = f.readline().rstrip()
-                text = f.readline().rstrip()
-
-    #if input_choice == "F":
-    #    with open("input.txt") as f:
-    #        pattern = f.readline().rstrip()
-    #        text = f.readline().rstrip()
+        with open("input.txt") as f:
+            pattern = f.readline().rstrip()
+            text = f.readline().rstrip()
     if check == "I":
         pattern = input().rstrip()
         text = input().rstrip()
 
-    # return both lines in one return
     return pattern, text
 
 
