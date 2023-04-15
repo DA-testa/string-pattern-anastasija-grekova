@@ -2,23 +2,31 @@ import os
 
 def read_input():
     check = input().rstrip()
-    #print(check)
-    #quit()
     
+
     if check == "F":
-        print(input())
-        quit()
-        path = os.getcwd() + '/tests'
+        path = os.getcwd()
         os.chdir(path)
-        file_name = '06'
-    
-        file_path = f"{path}/{file_name}"
-        print(input())
-        quit()
+        #file_name = '06'
+
+        #print(file_name)
+        #quit()
+
+        #if 'a' in file_name:
+        #    print("error")
+        #    quit()        
+        file_path = f"{path}/tests/06" 
+        #print(file_path)
+        #quit()
+        
         with open(file_path, "r", encoding="utf-8-sig") as f:
             pattern = f.readline().rstrip()
             text = f.readline().rstrip()    
 
+    #if check == "F":
+    #    with open("input.txt") as f:
+    #        pattern = f.readline().rstrip()
+    #        text = f.readline().rstrip()
     if check == "I":
         pattern = input().rstrip()
         text = input().rstrip()
@@ -32,6 +40,7 @@ def print_occurrences(output):
 def get_occurrences(pattern, text):
     count = []
     patternLength = len(pattern)
+    #textLength = len(text)
 
     patternHashVal = sum(ord(pattern[i]) * pow(10, patternLength - i - 1) for i in range(patternLength)) 
 
