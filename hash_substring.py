@@ -6,10 +6,11 @@ def read_input():
     if check == "F":
         path = os.getcwd() + '/tests'
         os.chdir(path)
-        file_name = '6'
+        file_name = '06'
     
         file_path = f"{path}/{file_name}"
-        
+        print(input())
+        quit()
         with open(file_path, "r", encoding="utf-8-sig") as f:
             pattern = f.readline().rstrip()
             text = f.readline().rstrip()    
