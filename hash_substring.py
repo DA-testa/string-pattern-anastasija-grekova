@@ -6,26 +6,14 @@ def read_input():
     if check == "F":
         path = os.getcwd() + '/tests'
         os.chdir(path)
-        file_name = input()
-
-        #print(file_name)
-        #quit()
-
-        if 'a' in file_name:
-            print("error")
-            quit()        
-        file_path = f"{path}/{file_name}" 
-        #print(file_path)
-        #quit()
+        file_name = '6'
+    
+        file_path = f"{path}/{file_name}"
         
         with open(file_path, "r", encoding="utf-8-sig") as f:
             pattern = f.readline().rstrip()
             text = f.readline().rstrip()    
 
-    #if check == "F":
-    #    with open("input.txt") as f:
-    #        pattern = f.readline().rstrip()
-    #        text = f.readline().rstrip()
     if check == "I":
         pattern = input().rstrip()
         text = input().rstrip()
@@ -39,7 +27,6 @@ def print_occurrences(output):
 def get_occurrences(pattern, text):
     count = []
     patternLength = len(pattern)
-    #textLength = len(text)
 
     patternHashVal = sum(ord(pattern[i]) * pow(10, patternLength - i - 1) for i in range(patternLength)) 
 
