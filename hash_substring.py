@@ -4,7 +4,7 @@ def read_input():
     check = input().rstrip()
 
 
-    if check == 'F':
+    if check == "F":
         path = os.getcwd() + '/tests'
         os.chdir(path)
         file_name = input()
