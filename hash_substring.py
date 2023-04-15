@@ -2,8 +2,8 @@ import os
 
 def read_input():
     check = input().rstrip()
-    print(check)
-    quit()
+    #print(check)
+    #quit()
     
     if check == "F":
         path = os.getcwd() + '/tests'
